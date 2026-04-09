@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>929760111027-ko9ef37d5cjq38n00l6n3te720cf0o0c.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.929760111027-ko9ef37d5cjq38n00l6n3te720cf0o0c</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>929760111027-alp24rrlpq59cdmkib0fntjaiismegpq.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBrS2N-chfnGxNSeclFNcQMF1qiFcFLXv0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>929760111027</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>bemindpower.app</string>
+	<key>PROJECT_ID</key>
+	<string>be-mindpower</string>
+	<key>STORAGE_BUCKET</key>
+	<string>be-mindpower.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:929760111027:ios:0c64fa56245caee77d43c6</string>
+</dict>
+</plist>

@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "chat.bemindepower.bmpchat",
+      "sha256_cert_fingerprints": [
+        "83:A5:86:3D:0B:42:20:A8:FF:0A:4D:7B:7F:54:B4:2F:E5:27:AD:9A:1F:2C:64:67:CB:1F:B8:3D:1F:3F:28:A3"
+      ]
+    }
+  }
+]

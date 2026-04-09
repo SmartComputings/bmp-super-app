@@ -1,0 +1,6 @@
+﻿# flutter_rust_bridge configuration for Be Mind Power Chat
+rust_input: "src/lib.rs"
+dart_output: "../lib/bridge_generated.dart"
+c_output: "../ios/Classes/frb.h"
+wasm: true
+web: true

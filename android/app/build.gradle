@@ -1,0 +1,239 @@
+plugins {
+    id "com.android.application"
+    id "org.jetbrains.kotlin.android"
+    id "dev.flutter.flutter-gradle-plugin"
+    id "com.google.gms.google-services"
+}
+
+
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+
+def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
+if (flutterVersionCode == null) {
+    flutterVersionCode = '1'
+}
+
+def flutterVersionName = localProperties.getProperty('flutter.versionName')
+if (flutterVersionName == null) {
+    flutterVersionName = '1.0'
+}
+
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file('key.properties')
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
+android {
+    compileSdk = 36
+    namespace = "chat.bemindepower.bmpchat"
+    ndkVersion "29.0.13113456"
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+
+    defaultConfig {
+        applicationId "chat.bemindepower.bmpchat"
+        minSdkVersion flutter.minSdkVersion
+        targetSdkVersion 36
+        versionCode flutterVersionCode.toInteger()
+        versionName flutterVersionName
+        ndkVersion "29.0.13113456"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        
+        // Enhanced size optimizations
+        vectorDrawables.useSupportLibrary = true
+        
+        // Essential languages for smaller size
+        resConfigs "en"
+        
+        // Single architecture for smaller size
+        ndk {
+            abiFilters 'arm64-v8a'
+        }
+        
+        // Disable 16KB page size support for incompatible libraries
+        manifestPlaceholders = [
+            'supports16KbPageSize': 'false'
+        ]
+        
+        ndk.debugSymbolLevel = 'NONE'
+    }
+
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+    
+
+    splits {
+        abi {
+            enable false
+        }
+    }
+    
+    bundle {
+        language {
+            enableSplit = true
+        }
+        density {
+            enableSplit = true
+        }
+        abi {
+            enableSplit = true
+        }
+    }
+    
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+            versionNameSuffix "-debug"
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            
+            // Enhanced optimizations
+            debuggable false
+            jniDebuggable false
+            renderscriptDebuggable false
+            pseudoLocalesEnabled false
+            zipAlignEnabled true
+            
+            // Resource shrinking
+            resValue "string", "app_name", "Be Mind Power"
+            
+            // Maximum size optimizations
+            crunchPngs true
+            shrinkResources true
+            minifyEnabled true
+            
+            // Remove debug info
+            buildConfigField "boolean", "DEBUG", "false"
+            buildConfigField "boolean", "ENABLE_LOGGING", "false"
+        }
+    }
+    
+    // Enhanced packaging options for size reduction
+    packagingOptions {
+        jniLibs {
+            useLegacyPackaging = true
+        }
+        
+        // Exclude incompatible 16KB libraries
+        exclude '**/libImaging.so'
+        exclude '**/libcrypto.so'
+        exclude '**/libflutter_openssl_crypto.so'
+        
+        // Exclude unnecessary files
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/*.kotlin_module'
+        exclude 'META-INF/*.version'
+        exclude 'META-INF/maven/**'
+        exclude 'META-INF/proguard/**'
+        exclude 'META-INF/services/**'
+        exclude 'META-INF/versions/**'
+        
+        // Exclude unused resources
+        exclude '**/META-INF/**'
+        exclude '**/LICENSE'
+        exclude '**/NOTICE'
+        exclude '**/DEPENDENCIES'
+        exclude '**/INDEX.LIST'
+        exclude '**/services/**'
+        exclude '**/versions/**'
+        
+        // Keep vodozemac native libraries
+        pickFirst 'lib/*/libvodozemac_bindings_dart.so'
+        
+        // Exclude heavy assets for size reduction
+        exclude 'assets/video/**'
+        exclude 'assets/images/onboarding/**'
+        exclude 'assets/splashscreen/**'
+        exclude 'assets/fonts/unused/**'
+        exclude 'assets/sounds/**'
+        
+        // Exclude debug symbols
+        exclude '**/*.debug'
+        exclude '**/*.sym'
+        exclude '**/DWARF/**'
+        
+        // Exclude unused resources
+        exclude 'res/drawable-ldpi/**'
+        exclude 'res/drawable-mdpi/**'
+        exclude 'res/mipmap-ldpi/**'
+        exclude 'res/mipmap-mdpi/**'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+        coreLibraryDesugaringEnabled true
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+        languageVersion = "2.0"
+    }
+}
+
+
+flutter {
+    source '../..'
+}
+
+dependencies {
+    // Firebase BoM for consistent versions
+    implementation platform('com.google.firebase:firebase-bom:32.8.1')
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-appcheck-playintegrity'
+    implementation 'com.google.firebase:firebase-appcheck-debug'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")
+
+}
+
+configurations.all {
+    //exclude group: 'com.google.android.gms'
+    
+    // Enhanced size optimization: exclude unused dependencies
+    exclude group: 'org.jetbrains.kotlin', module: 'kotlin-stdlib-jdk7'
+    exclude group: 'org.jetbrains.kotlin', module: 'kotlin-stdlib-jdk8'
+    
+    // Force specific versions to reduce conflicts
+    resolutionStrategy {
+        force 'androidx.core:core-ktx:1.12.0'
+        force 'androidx.appcompat:appcompat:1.6.1'
+    }
+}

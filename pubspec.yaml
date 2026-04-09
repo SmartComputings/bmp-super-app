@@ -1,0 +1,262 @@
+name: bmp
+description: Be Mind Power Chat App.
+publish_to: none
+# On version bump also increase the build number for F-Droid
+version: 1.0.13+78
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  animations: ^2.0.11
+  app_links: ^6.3.3
+  app_settings: ^5.1.1
+  archive: ^3.4.10
+  async: ^2.11.0
+  badges: ^3.1.2
+  blurhash_dart: ^1.2.1
+  cached_network_image: ^3.4.1
+  chewie: ^1.11.3
+  collection: ^1.18.0
+  connectivity_plus: ^6.0.5
+  cross_file: ^0.3.4+2
+  cupertino_icons: any
+  desktop_drop: ^0.4.4
+  desktop_notifications: ^0.6.3
+  device_info_plus: ^10.0.1
+  dynamic_color: ^1.7.0
+  emoji_picker_flutter: ^3.1.0
+  emojis: ^0.9.9
+  fcm_shared_isolate: ^0.2.0
+  firebase_messaging: ^14.7.10
+  file_picker: ^8.1.2
+  file_selector: ^1.0.3
+  flutter:
+    sdk: flutter
+  flutter_cache_manager: ^3.4.1
+  flutter_foreground_task: ^6.1.3
+  flutter_highlighter: ^0.1.1
+  flutter_linkify: ^6.0.0
+  flutter_local_notifications: ^17.2.3
+  flutter_localizations:
+    sdk: flutter
+  flutter_map: ^8.2.1
+  flutter_new_badger: ^1.1.1
+  flutter_openssl_crypto: ^0.5.0
+  flutter_secure_storage: ^9.2.4
+  flutter_shortcuts_new: ^2.0.0
+  flutter_dotenv: ^5.1.0
+  fl_chart: ^0.68.0
+  flutter_typeahead: ## Custom fork from flutter_typeahead since the package is not maintain well.
+    git:
+      url: https://github.com/famedly/flutter_typeahead.git
+      ref: main
+  flutter_vodozemac: ^0.4.1
+  flutter_web_auth_2: ^3.1.1 # Version 4 blocked by https://github.com/MixinNetwork/flutter-plugins/issues/379
+  flutter_webrtc: ^0.12.9
+  geolocator: ^13.0.1
+  geocoding: ^3.0.0
+  latlong2: ^0.9.1
+  go_router: ^15.1.2
+  handy_window: ^0.4.0
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  equatable: ^2.0.5
+  fpdart: ^1.1.0
+  html: ^0.15.4
+  http: ^1.2.0
+  pointycastle: ^3.7.3
+  basic_utils: ^5.7.0
+  image: ^4.3.0
+  image_picker: ^1.1.0
+  intl: any
+  just_audio: ^0.9.39
+  linkify: ^5.0.0
+  matrix: ^3.0.2
+  mime: ^1.0.6
+  # native_imaging: ^0.2.0  # Removed: 16KB alignment issue
+  opus_caf_converter_dart: ^1.0.1
+  package_info_plus: ^8.0.2
+  pasteboard: ^0.2.0
+  path: ^1.9.0
+  path_provider: ^2.1.2
+  permission_handler: ^11.0.1
+  pretty_qr_code: ^3.2.1
+  provider: ^6.0.2
+  punycode: ^1.0.0
+  qr_code_scanner_plus: ^2.0.10+1
+  qr_image: ^1.0.0
+  qr_flutter: ^4.1.0
+  # receive_sharing_intent: ^1.8.1
+  # image_gallery_saver: ^2.0.3
+
+  record: ^6.0.0
+  scroll_to_index: ^3.0.1
+  share_plus: ^10.0.2
+  shared_preferences: ^2.3.2
+  slugify: ^2.0.0
+  sqflite: ^2.3.2
+  sqflite_common_ffi: ^2.3.3
+  sqlcipher_flutter_libs: ^0.6.1
+  swipe_to_action: ^0.3.0
+  tor_detector_web: ^1.1.0
+  unifiedpush: ^5.0.1
+  unifiedpush_ui: ^0.1.0
+  universal_html: ^2.2.4
+  url_launcher: ^6.2.5
+  video_compress: ^3.1.4
+  video_player: ^2.9.5
+  video_thumbnail: ^0.5.6
+  wakelock_plus: ^1.2.2
+  webrtc_interface: ^1.0.13
+  webview_flutter: ^4.7.0
+  webview_flutter_android: ^3.16.0
+  flutter_svg: ^2.2.1
+  google_fonts: ^6.3.0
+  get: ^4.7.2
+  flutter_contacts: ^1.1.9
+  step_progress: ^2.6.1
+
+  flutter_inappwebview: ^6.1.5
+  webview_flutter_wkwebview: ^3.13.0
+  dio: ^5.9.0
+  smooth_page_indicator: ^1.2.1
+  animated_bottom_navigation_bar: ^1.4.0
+  flutter_card_swiper: ^7.0.1
+  country_flags: ^4.1.0
+  photo_manager: ^3.7.1
+  camera: ^0.11.2
+  flutter_slidable: ^4.0.3
+  modal_bottom_sheet: ^3.0.0
+  upgrader: ^12.3.0
+  open_filex: ^4.4.0
+  country_code_picker: ^3.4.1
+  gap: ^3.0.1
+  pinput: ^6.0.1
+  flutter_stripe: ^12.2.0
+  sqlite3: ^2.9.4
+  firebase_auth: ^4.16.0
+  firebase_core: ^2.32.0
+  firebase_app_check: ^0.2.2
+
+dev_dependencies:
+  flutter_lints: ^3.0.0
+  flutter_launcher_icons: ^0.13.1
+  flutter_test:
+    sdk: flutter
+  import_sorter: ^4.6.0
+  license_checker: ^1.6.0
+  msix: ^3.6.2
+  translations_cleaner: ^0.0.5
+  hive_generator: ^2.0.1
+  build_runner: ^2.4.7
+
+
+import_sorter:
+  ignored_files: # Optional, defaults to []
+    - \/lib\/l10n
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/logo_main.png"
+  min_sdk_android: 21
+  web:
+    generate: true
+    image_path: "assets/logo_main.png"
+    background_color: "#hexcode"
+    theme_color: "#hexcode"
+  windows:
+    generate: true
+    image_path: "assets/logo_main.png"
+    icon_size: 40
+  macos:
+    generate: true
+    image_path: "assets/logo_main.png"
+
+flutter:
+  generate: true
+  uses-material-design: true
+  assets:
+    - assets/
+    - assets/sounds/
+    - assets/assets/vodozemac/
+    - assets/logo_main.png
+    - assets/logo_text.png
+    - assets/bridge-countries.json
+    - assets/paycrypto_supported_countries.json
+    - assets/sas-emoji.json
+    - assets/config/
+    - assets/data/customer_requirements.json
+    - assets/images/
+    - assets/images/svg/
+    - assets/images/icons/
+    - assets/images/icons/svg/
+    - assets/images/svg/card/
+    - assets/images/svg/wallet/
+    - assets/images/networks/
+    - assets/images/new_icons/
+    - assets/images/wallet_dashboard/
+    - assets/icons/
+    - assets/chat_icons/
+    - assets/video/
+    - assets/MainMenu/
+    - assets/images/onboarding/
+    - assets/images/chat_details/
+    - assets/images/finance/
+    - assets/images/empty_state/
+    - assets/wallet_icons/
+    - assets/wallet_icons/liquidation_address_icons/
+    - assets/wallet_icons/cards_icons/
+    - assets/wallet_icons/external_account_icons/
+    - assets/wallet_icons/transaction_icons/
+    - assets/wallet_icons/verification/
+    - assets/wallet_icons/virtual_account_icons/
+    - assets/wallet_icons/wallet_icon/
+    - assets/images/empty_state/
+    - .env
+
+  fonts:
+    - family: AllRoundGothic
+      fonts:
+        - asset: assets/fonts/fonnts.com-All_Round_Gothic_XLig.otf
+          weight: 100
+        - asset: assets/fonts/fonnts.com-All_Round_Gothic_Book.otf
+          weight: 300
+        - asset: assets/fonts/fonnts.com-All_Round_Gothic_Book.otf
+          weight: 400
+        - asset: assets/fonts/fonnts.com-All_Round_Gothic_Medium.otf
+          weight: 500
+        - asset: assets/fonts/fonnts.com-All_Round_Gothic_Bold.otf
+          weight: 700
+
+
+msix_config:
+  display_name: BMP
+  publisher_display_name: BMP
+  publisher: CN=BMP, O=Be Mind Power, L=Matrix, S=Internet, C=EU
+  identity_name: chat.BMP.bemindpower
+  logo_path: assets\logo.png
+  capabilities: internetClient, location, microphone, webcam
+  protocol_activation: https
+  app_uri_handler_hosts: fluffychat.im, matrix.to
+  execution_alias: fluffychat
+  sign_msix: false
+  install_certificate: false
+
+dependency_overrides:
+  # https://github.com/juliansteenbakker/flutter_secure_storage/issues/920
+  flutter_secure_storage_linux:
+    git:
+      url: https://github.com/m-berto/flutter_secure_storage.git
+      ref: patch-2
+      path: flutter_secure_storage_linux
+  flutter_secure_storage_platform_interface: 2.0.0
+  # https://github.com/ThexXTURBOXx/flutter_web_auth_2/issues/155
+  flutter_web_auth_2:
+    git:
+      url: https://github.com/ThexXTURBOXx/flutter_web_auth_2.git
+      ref: 3.x-without-v1
+      path: flutter_web_auth_2
+  shared_preferences_android: 2.4.4
+  win32: 5.5.3

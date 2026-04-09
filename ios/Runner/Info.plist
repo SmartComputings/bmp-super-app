@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BGTaskSchedulerPermittedIdentifiers</key>
+	<array>
+		<string>im.fluffychat.app</string>
+	</array>
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>BMP</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>BMP</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(FLUTTER_BUILD_NAME)</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>firebase</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>app-1-929760111027-ios-0c64fa56245caee77d43c6</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>google-reversed-client-id</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.929760111027-ko9ef37d5cjq38n00l6n3te720cf0o0c</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>im.fluffychat.app.uris</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>ShareMedia-$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+				<string>matrix</string>
+				<string>myapp</string>
+				<string>bemindpower.app</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>FirebaseAppDelegateProxyEnabled</key>
+	<true/>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+<!--	<key>NSUserTrackingUsageDescription</key>-->
+<!--	<string>This app does not track your data for advertising purposes. Your data is used strictly for in-app functionality.</string>-->
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>Play audio and voice messages in the app.</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Play audio and voice messages via bluetooth devices.</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Play audio and voice messages on bluetooth devices</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Share calendar dates with your contacts in BMP.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Open the camera and take a picture to share them with your contacts on BMP.</string>
+	<key>NSContactsUsageDescription</key>
+	<string>Share contacts with your contacts in BMP.</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>BMP uses an app lock for an additional security level</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Share your location with your contacts in BMP.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Share your location with your contacts in BMP.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Share your location with your contacts in BMP.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Record voice message and share them with your contacts on BMP.</string>
+	<key>NSMotionUsageDescription</key>
+	<string>Share motions with your contacts in BMP.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Open photos from your gallery and share them with your contacts on BMP.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Share data with your contacts in BMP.</string>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
+<!--	<key>UIBackgroundModes</key>-->
+<!--	<array>-->
+<!--		<string>fetch</string>-->
+<!--		<string>processing</string>-->
+<!--		<string>remote-notification</string>-->
+<!--		<string>location</string>-->
+<!--		<string>push-to-talk</string>-->
+<!--		<string>nearby-interaction</string>-->
+<!--		<string>voip</string>-->
+<!--	</array>-->
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UIStatusBarHidden</key>
+	<false/>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	<key>io.flutter.embedded_views_preview</key>
+	<true/>
+</dict>
+</plist>

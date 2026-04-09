@@ -1,0 +1,1292 @@
+[
+  {
+    "country": "AFG",
+    "payload": {
+      "postal_code": "1001"
+    }
+  },
+  {
+    "country": "ALB",
+    "payload": {
+      "postal_code": "1000"
+    }
+  },
+  {
+    "country": "DZA",
+    "payload": {
+      "postal_code": "16000"
+    }
+  },
+  {
+    "country": "ASM",
+    "payload": {
+      "postal_code": "96799"
+    }
+  },
+  {
+    "country": "AND",
+    "payload": {
+      "postal_code": "AD500"
+    }
+  },
+  {
+    "country": "AGO",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "AIA",
+    "payload": {
+      "postal_code": "AI-2640"
+    }
+  },
+  {
+    "country": "ATG",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "ARG",
+    "payload": {
+      "postal_code": "C1000"
+    }
+  },
+  {
+    "country": "ARM",
+    "payload": {
+      "postal_code": "0010"
+    }
+  },
+  {
+    "country": "ABW",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "AUS",
+    "payload": {
+      "postal_code": "2000"
+    }
+  },
+  {
+    "country": "AUT",
+    "payload": {
+      "postal_code": "1010"
+    }
+  },
+  {
+    "country": "AZE",
+    "payload": {
+      "postal_code": "AZ1000"
+    }
+  },
+  {
+    "country": "BHS",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "BHR",
+    "payload": {
+      "postal_code": "317"
+    }
+  },
+  {
+    "country": "BGD",
+    "payload": {
+      "postal_code": "1000"
+    }
+  },
+  {
+    "country": "BRB",
+    "payload": {
+      "postal_code": "BB11000"
+    }
+  },
+  {
+    "country": "BLR",
+    "payload": {
+      "postal_code": "220000"
+    }
+  },
+  {
+    "country": "BEL",
+    "payload": {
+      "postal_code": "1000"
+    }
+  },
+  {
+    "country": "BLZ",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "BEN",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "BMU",
+    "payload": {
+      "postal_code": "HM 12"
+    }
+  },
+  {
+    "country": "BTN",
+    "payload": {
+      "postal_code": "11001"
+    }
+  },
+  {
+    "country": "BOL",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "BIH",
+    "payload": {
+      "postal_code": "71000"
+    }
+  },
+  {
+    "country": "BWA",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "BRA",
+    "payload": {
+      "postal_code": "01310-100"
+    }
+  },
+  {
+    "country": "VGB",
+    "payload": {
+      "postal_code": "VG1110"
+    }
+  },
+  {
+    "country": "BRN",
+    "payload": {
+      "postal_code": "BS8675"
+    }
+  },
+  {
+    "country": "BGR",
+    "payload": {
+      "postal_code": "1000"
+    }
+  },
+  {
+    "country": "BFA",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "BDI",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "CPV",
+    "payload": {
+      "postal_code": "7600"
+    }
+  },
+  {
+    "country": "KHM",
+    "payload": {
+      "postal_code": "12000"
+    }
+  },
+  {
+    "country": "CMR",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "CAN",
+    "payload": {
+      "postal_code": "K1A 0A6"
+    }
+  },
+  {
+    "country": "CYM",
+    "payload": {
+      "postal_code": "KY1-1100"
+    }
+  },
+  {
+    "country": "CAF",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "TCD",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "CHL",
+    "payload": {
+      "postal_code": "8320000"
+    }
+  },
+  {
+    "country": "CHN",
+    "payload": {
+      "postal_code": "100000"
+    }
+  },
+  {
+    "country": "CXR",
+    "payload": {
+      "postal_code": "6798"
+    }
+  },
+  {
+    "country": "COL",
+    "payload": {
+      "postal_code": "110111"
+    }
+  },
+  {
+    "country": "COM",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "COG",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "COD",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "CRI",
+    "payload": {
+      "postal_code": "10101"
+    }
+  },
+  {
+    "country": "CIV",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "HRV",
+    "payload": {
+      "postal_code": "10000"
+    }
+  },
+  {
+    "country": "CUB",
+    "payload": {
+      "postal_code": "10100"
+    }
+  },
+  {
+    "country": "CUW",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "CYP",
+    "payload": {
+      "postal_code": "1010"
+    }
+  },
+  {
+    "country": "CZE",
+    "payload": {
+      "postal_code": "11000"
+    }
+  },
+  {
+    "country": "DNK",
+    "payload": {
+      "postal_code": "1000"
+    }
+  },
+  {
+    "country": "DJI",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "DMA",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "DOM",
+    "payload": {
+      "postal_code": "10101"
+    }
+  },
+  {
+    "country": "ECU",
+    "payload": {
+      "postal_code": "170150"
+    }
+  },
+  {
+    "country": "EGY",
+    "payload": {
+      "postal_code": "11511"
+    }
+  },
+  {
+    "country": "SLV",
+    "payload": {
+      "postal_code": "01101"
+    }
+  },
+  {
+    "country": "GNQ",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "ERI",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "EST",
+    "payload": {
+      "postal_code": "10111"
+    }
+  },
+  {
+    "country": "SWZ",
+    "payload": {
+      "postal_code": "H100"
+    }
+  },
+  {
+    "country": "ETH",
+    "payload": {
+      "postal_code": "1000"
+    }
+  },
+  {
+    "country": "FRO",
+    "payload": {
+      "postal_code": "FO-100"
+    }
+  },
+  {
+    "country": "FJI",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "FIN",
+    "payload": {
+      "postal_code": "00100"
+    }
+  },
+  {
+    "country": "FRA",
+    "payload": {
+      "postal_code": "75001"
+    }
+  },
+  {
+    "country": "GAB",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "GMB",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "GEO",
+    "payload": {
+      "postal_code": "0108"
+    }
+  },
+  {
+    "country": "DEU",
+    "payload": {
+      "postal_code": "10115"
+    }
+  },
+  {
+    "country": "GHA",
+    "payload": {
+      "postal_code": "GA-039-5028"
+    }
+  },
+  {
+    "country": "GIB",
+    "payload": {
+      "postal_code": "GX11 1AA"
+    }
+  },
+  {
+    "country": "GRC",
+    "payload": {
+      "postal_code": "10431"
+    }
+  },
+  {
+    "country": "GRL",
+    "payload": {
+      "postal_code": "3900"
+    }
+  },
+  {
+    "country": "GRD",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "GUM",
+    "payload": {
+      "postal_code": "96910"
+    }
+  },
+  {
+    "country": "GTM",
+    "payload": {
+      "postal_code": "01001"
+    }
+  },
+  {
+    "country": "GGY",
+    "payload": {
+      "postal_code": "GY1 1AA"
+    }
+  },
+  {
+    "country": "GIN",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "GNB",
+    "payload": {
+      "postal_code": "1000"
+    }
+  },
+  {
+    "country": "GUY",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "HTI",
+    "payload": {
+      "postal_code": "HT6110"
+    }
+  },
+  {
+    "country": "HND",
+    "payload": {
+      "postal_code": "11101"
+    }
+  },
+  {
+    "country": "HKG",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "HUN",
+    "payload": {
+      "postal_code": "1051"
+    }
+  },
+  {
+    "country": "ISL",
+    "payload": {
+      "postal_code": "101"
+    }
+  },
+  {
+    "country": "IND",
+    "payload": {
+      "postal_code": "110001"
+    }
+  },
+  {
+    "country": "IDN",
+    "payload": {
+      "postal_code": "10110"
+    }
+  },
+  {
+    "country": "IRQ",
+    "payload": {
+      "postal_code": "10001"
+    }
+  },
+  {
+    "country": "IRL",
+    "payload": {
+      "postal_code": "D01"
+    }
+  },
+  {
+    "country": "IMN",
+    "payload": {
+      "postal_code": "IM1 1AA"
+    }
+  },
+  {
+    "country": "ISR",
+    "payload": {
+      "postal_code": "9100001"
+    }
+  },
+  {
+    "country": "ITA",
+    "payload": {
+      "postal_code": "00118"
+    }
+  },
+  {
+    "country": "JAM",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "JPN",
+    "payload": {
+      "postal_code": "100-0001"
+    }
+  },
+  {
+    "country": "JEY",
+    "payload": {
+      "postal_code": "JE1 1AA"
+    }
+  },
+  {
+    "country": "JOR",
+    "payload": {
+      "postal_code": "11118"
+    }
+  },
+  {
+    "country": "KAZ",
+    "payload": {
+      "postal_code": "010000"
+    }
+  },
+  {
+    "country": "KEN",
+    "payload": {
+      "postal_code": "00100"
+    }
+  },
+  {
+    "country": "KIR",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "KOR",
+    "payload": {
+      "postal_code": "04524"
+    }
+  },
+  {
+    "country": "XKX",
+    "payload": {
+      "postal_code": "10000"
+    }
+  },
+  {
+    "country": "KWT",
+    "payload": {
+      "postal_code": "13001"
+    }
+  },
+  {
+    "country": "KGZ",
+    "payload": {
+      "postal_code": "720000"
+    }
+  },
+  {
+    "country": "LAO",
+    "payload": {
+      "postal_code": "01000"
+    }
+  },
+  {
+    "country": "LVA",
+    "payload": {
+      "postal_code": "LV-1050"
+    }
+  },
+  {
+    "country": "LBN",
+    "payload": {
+      "postal_code": "1107 2810"
+    }
+  },
+  {
+    "country": "LSO",
+    "payload": {
+      "postal_code": "100"
+    }
+  },
+  {
+    "country": "LBR",
+    "payload": {
+      "postal_code": "1000"
+    }
+  },
+  {
+    "country": "LBY",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "LIE",
+    "payload": {
+      "postal_code": "9490"
+    }
+  },
+  {
+    "country": "LTU",
+    "payload": {
+      "postal_code": "LT-01103"
+    }
+  },
+  {
+    "country": "LUX",
+    "payload": {
+      "postal_code": "L-1111"
+    }
+  },
+  {
+    "country": "MAC",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "MDG",
+    "payload": {
+      "postal_code": "101"
+    }
+  },
+  {
+    "country": "MWI",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "MYS",
+    "payload": {
+      "postal_code": "50000"
+    }
+  },
+  {
+    "country": "MDV",
+    "payload": {
+      "postal_code": "20026"
+    }
+  },
+  {
+    "country": "MLI",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "MLT",
+    "payload": {
+      "postal_code": "VLT 1117"
+    }
+  },
+  {
+    "country": "MHL",
+    "payload": {
+      "postal_code": "96960"
+    }
+  },
+  {
+    "country": "MRT",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "MUS",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "MEX",
+    "payload": {
+      "postal_code": "01000"
+    }
+  },
+  {
+    "country": "FSM",
+    "payload": {
+      "postal_code": "96941"
+    }
+  },
+  {
+    "country": "MDA",
+    "payload": {
+      "postal_code": "MD-2001"
+    }
+  },
+  {
+    "country": "MCO",
+    "payload": {
+      "postal_code": "98000"
+    }
+  },
+  {
+    "country": "MNG",
+    "payload": {
+      "postal_code": "14200"
+    }
+  },
+  {
+    "country": "MNE",
+    "payload": {
+      "postal_code": "81000"
+    }
+  },
+  {
+    "country": "MSR",
+    "payload": {
+      "postal_code": "MSR 1110"
+    }
+  },
+  {
+    "country": "MAR",
+    "payload": {
+      "postal_code": "10000"
+    }
+  },
+  {
+    "country": "MOZ",
+    "payload": {
+      "postal_code": "1100"
+    }
+  },
+  {
+    "country": "MMR",
+    "payload": {
+      "postal_code": "11181"
+    }
+  },
+  {
+    "country": "NAM",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "NRU",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "NPL",
+    "payload": {
+      "postal_code": "44600"
+    }
+  },
+  {
+    "country": "NLD",
+    "payload": {
+      "postal_code": "1012"
+    }
+  },
+  {
+    "country": "NZL",
+    "payload": {
+      "postal_code": "6011"
+    }
+  },
+  {
+    "country": "NIC",
+    "payload": {
+      "postal_code": "14001"
+    }
+  },
+  {
+    "country": "NER",
+    "payload": {
+      "postal_code": "8001"
+    }
+  },
+  {
+    "country": "NGA",
+    "payload": {
+      "postal_code": "100001"
+    }
+  },
+  {
+    "country": "MKD",
+    "payload": {
+      "postal_code": "1000"
+    }
+  },
+  {
+    "country": "NOR",
+    "payload": {
+      "postal_code": "0150"
+    }
+  },
+  {
+    "country": "OMN",
+    "payload": {
+      "postal_code": "100"
+    }
+  },
+  {
+    "country": "PAK",
+    "payload": {
+      "postal_code": "44000"
+    }
+  },
+  {
+    "country": "PLW",
+    "payload": {
+      "postal_code": "96940"
+    }
+  },
+  {
+    "country": "PSE",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "PAN",
+    "payload": {
+      "postal_code": "0801"
+    }
+  },
+  {
+    "country": "PNG",
+    "payload": {
+      "postal_code": "111"
+    }
+  },
+  {
+    "country": "PRY",
+    "payload": {
+      "postal_code": "1209"
+    }
+  },
+  {
+    "country": "PER",
+    "payload": {
+      "postal_code": "15001"
+    }
+  },
+  {
+    "country": "PHL",
+    "payload": {
+      "postal_code": "1000"
+    }
+  },
+  {
+    "country": "POL",
+    "payload": {
+      "postal_code": "00-001"
+    }
+  },
+  {
+    "country": "PRT",
+    "payload": {
+      "postal_code": "1000-001"
+    }
+  },
+  {
+    "country": "PRI",
+    "payload": {
+      "postal_code": "00901"
+    }
+  },
+  {
+    "country": "QAT",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "ROU",
+    "payload": {
+      "postal_code": "010011"
+    }
+  },
+  {
+    "country": "RUS",
+    "payload": {
+      "postal_code": "101000"
+    }
+  },
+  {
+    "country": "RWA",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "KNA",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "LCA",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "MAF",
+    "payload": {
+      "postal_code": "97150"
+    }
+  },
+  {
+    "country": "VCT",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "WSM",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "SMR",
+    "payload": {
+      "postal_code": "47890"
+    }
+  },
+  {
+    "country": "STP",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "SAU",
+    "payload": {
+      "postal_code": "11564"
+    }
+  },
+  {
+    "country": "SEN",
+    "payload": {
+      "postal_code": "12500"
+    }
+  },
+  {
+    "country": "SRB",
+    "payload": {
+      "postal_code": "11000"
+    }
+  },
+  {
+    "country": "SYC",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "SLE",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "SGP",
+    "payload": {
+      "postal_code": "018956"
+    }
+  },
+  {
+    "country": "SVK",
+    "payload": {
+      "postal_code": "81101"
+    }
+  },
+  {
+    "country": "SVN",
+    "payload": {
+      "postal_code": "1000"
+    }
+  },
+  {
+    "country": "SLB",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "SOM",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "ZAF",
+    "payload": {
+      "postal_code": "0001"
+    }
+  },
+  {
+    "country": "SSD",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "ESP",
+    "payload": {
+      "postal_code": "28001"
+    }
+  },
+  {
+    "country": "LKA",
+    "payload": {
+      "postal_code": "00100"
+    }
+  },
+  {
+    "country": "SDN",
+    "payload": {
+      "postal_code": "11111"
+    }
+  },
+  {
+    "country": "SUR",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "SWE",
+    "payload": {
+      "postal_code": "11122"
+    }
+  },
+  {
+    "country": "CHE",
+    "payload": {
+      "postal_code": "8001"
+    }
+  },
+  {
+    "country": "TWN",
+    "payload": {
+      "postal_code": "100"
+    }
+  },
+  {
+    "country": "TJK",
+    "payload": {
+      "postal_code": "734025"
+    }
+  },
+  {
+    "country": "TZA",
+    "payload": {
+      "postal_code": "11101"
+    }
+  },
+  {
+    "country": "THA",
+    "payload": {
+      "postal_code": "10100"
+    }
+  },
+  {
+    "country": "TLS",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "TGO",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "TON",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "TTO",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "TUN",
+    "payload": {
+      "postal_code": "1000"
+    }
+  },
+  {
+    "country": "TUR",
+    "payload": {
+      "postal_code": "34000"
+    }
+  },
+  {
+    "country": "TKM",
+    "payload": {
+      "postal_code": "744000"
+    }
+  },
+  {
+    "country": "TCA",
+    "payload": {
+      "postal_code": "TKCA 1ZZ"
+    }
+  },
+  {
+    "country": "TUV",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "UGA",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "UKR",
+    "payload": {
+      "postal_code": "01001"
+    }
+  },
+  {
+    "country": "ARE",
+    "payload": {
+      "postal_code": "00000"
+    }
+  },
+  {
+    "country": "GBR",
+    "payload": {
+      "postal_code": "SW1A 1AA"
+    }
+  },
+  {
+    "country": "USA",
+    "payload": {
+      "postal_code": "20500"
+    }
+  },
+  {
+    "country": "URY",
+    "payload": {
+      "postal_code": "11000"
+    }
+  },
+  {
+    "country": "UZB",
+    "payload": {
+      "postal_code": "100000"
+    }
+  },
+  {
+    "country": "VUT",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "VEN",
+    "payload": {
+      "postal_code": "1010"
+    }
+  },
+  {
+    "country": "VNM",
+    "payload": {
+      "postal_code": "100000"
+    }
+  },
+  {
+    "country": "VIR",
+    "payload": {
+      "postal_code": "00801"
+    }
+  },
+  {
+    "country": "YEM",
+    "payload": {
+      "postal_code": "0000"
+    }
+  },
+  {
+    "country": "ZMB",
+    "payload": {
+      "postal_code": "10101"
+    }
+  },
+  {
+    "country": "ZWE",
+    "payload": {
+      "postal_code": "0000"
+    }
+  }
+]

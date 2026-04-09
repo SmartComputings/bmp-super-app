@@ -1,0 +1,7 @@
+.env
+/build/
+/.dart_tool/
+/.ruby-lsp/
+.mailmap
+.idea/workspace.xml
+.metadata

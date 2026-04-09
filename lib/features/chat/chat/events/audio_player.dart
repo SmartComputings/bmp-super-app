@@ -1,0 +1,593 @@
+import 'dart:async';
+import 'dart:io';
+
+import 'package:async/async.dart';
+import 'package:bmp/core/config/app_config.dart';
+import 'package:bmp/core/config/themes.dart';
+import 'package:bmp/core/localization/l10n.dart';
+import 'package:bmp/shared/utils/error_reporter.dart';
+import 'package:bmp/shared/utils/file_description.dart';
+import 'package:bmp/shared/utils/localized_exception_extension.dart';
+import 'package:bmp/shared/utils/matrix_sdk_extensions/event_extension.dart';
+import 'package:bmp/shared/utils/snackbar.dart';
+import 'package:bmp/shared/utils/url_launcher.dart';
+import 'package:bmp/shared/widgets/bmp_chat_app.dart';
+import 'package:bmp/shared/widgets/matrix.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_linkify/flutter_linkify.dart';
+import 'package:just_audio/just_audio.dart';
+import 'package:matrix/matrix.dart';
+import 'package:opus_caf_converter_dart/opus_caf_converter_dart.dart';
+import 'package:path_provider/path_provider.dart';
+
+class AudioPlayerWidget extends StatefulWidget {
+  final Color color;
+  final Color linkColor;
+  final double fontSize;
+  final Event event;
+
+  static const int wavesCount = 40;
+
+  const AudioPlayerWidget(
+    this.event, {
+    required this.color,
+    required this.linkColor,
+    required this.fontSize,
+    super.key,
+  });
+
+  @override
+  AudioPlayerState createState() => AudioPlayerState();
+}
+
+enum AudioPlayerStatus { notDownloaded, downloading, downloaded }
+
+class AudioPlayerState extends State<AudioPlayerWidget> {
+  static const double buttonSize = 36;
+
+  AudioPlayerStatus status = AudioPlayerStatus.notDownloaded;
+
+  late final MatrixState matrix;
+  List<int>? _waveform;
+  String? _durationString;
+
+  @override
+  void dispose() {
+    super.dispose();
+    final audioPlayer = matrix.voiceMessageEventId.value != widget.event.eventId
+        ? null
+        : matrix.audioPlayer;
+    if (audioPlayer != null) {
+      if (audioPlayer.playing && !audioPlayer.isAtEndPosition) {
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          ScaffoldMessenger.of(matrix.context).showMaterialBanner(
+            MaterialBanner(
+              padding: EdgeInsets.zero,
+              leading: StreamBuilder(
+                stream: audioPlayer.playerStateStream.asBroadcastStream(),
+                builder: (context, _) => IconButton(
+                  onPressed: () {
+                    if (audioPlayer.isAtEndPosition) {
+                      audioPlayer.seek(Duration.zero);
+                    } else if (audioPlayer.playing) {
+                      audioPlayer.pause();
+                    } else {
+                      audioPlayer.play();
+                    }
+                  },
+                  icon: audioPlayer.playing && !audioPlayer.isAtEndPosition
+                      ? const Icon(Icons.pause_outlined)
+                      : const Icon(Icons.play_arrow_outlined),
+                ),
+              ),
+              content: StreamBuilder(
+                stream: audioPlayer.positionStream.asBroadcastStream(),
+                builder: (context, _) => GestureDetector(
+                  onTap: () => BmpChatApp.router.go(
+                    '/rooms/${widget.event.room.id}?event=${widget.event.eventId}',
+                  ),
+                  child: Text(
+                    '🎙️ ${audioPlayer.position.minuteSecondString} / ${audioPlayer.duration?.minuteSecondString} - ${widget.event.senderFromMemoryOrFallback.calcDisplayname()}',
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+              ),
+              actions: [
+                IconButton(
+                  onPressed: () {
+                    audioPlayer.pause();
+                    audioPlayer.dispose();
+                    matrix.voiceMessageEventId.value =
+                        matrix.audioPlayer = null;
+
+                    WidgetsBinding.instance.addPostFrameCallback((_) {
+                      ScaffoldMessenger.of(matrix.context)
+                          .clearMaterialBanners();
+                    });
+                  },
+                  icon: const Icon(Icons.close_outlined),
+                ),
+              ],
+            ),
+          );
+        });
+        return;
+      }
+      audioPlayer.pause();
+      audioPlayer.dispose();
+      matrix.voiceMessageEventId.value = matrix.audioPlayer = null;
+    }
+  }
+
+  void _onButtonTap() async {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      ScaffoldMessenger.of(matrix.context).clearMaterialBanners();
+    });
+    final currentPlayer =
+        matrix.voiceMessageEventId.value != widget.event.eventId
+            ? null
+            : matrix.audioPlayer;
+    if (currentPlayer != null) {
+      if (currentPlayer.isAtEndPosition) {
+        currentPlayer.seek(Duration.zero);
+      } else if (currentPlayer.playing) {
+        currentPlayer.pause();
+      } else {
+        currentPlayer.play();
+      }
+      return;
+    }
+
+    matrix.voiceMessageEventId.value = widget.event.eventId;
+    matrix.audioPlayer
+      ?..stop()
+      ..dispose();
+    File? file;
+    MatrixFile? matrixFile;
+
+    setState(() => status = AudioPlayerStatus.downloading);
+    try {
+      matrixFile = await widget.event.downloadAndDecryptAttachment();
+
+      if (!kIsWeb) {
+        final tempDir = await getTemporaryDirectory();
+        final fileName = Uri.encodeComponent(
+          widget.event.attachmentOrThumbnailMxcUrl()!.pathSegments.last,
+        );
+        file = File('${tempDir.path}/${fileName}_${matrixFile.name}');
+
+        await file.writeAsBytes(matrixFile.bytes);
+
+        if (Platform.isIOS &&
+            matrixFile.mimeType.toLowerCase() == 'audio/ogg') {
+          Logs().v('Convert ogg audio file for iOS...');
+          final convertedFile = File('${file.path}.caf');
+          if (await convertedFile.exists() == false) {
+            OpusCaf().convertOpusToCaf(file.path, convertedFile.path);
+          }
+          file = convertedFile;
+        }
+      }
+
+      setState(() {
+        status = AudioPlayerStatus.downloaded;
+      });
+    } catch (e, s) {
+      Logs().v('Could not download audio file', e, s);
+      CustomSnackbar.show(
+        context,
+        title: L10n.of(context).error,
+        message: e.toLocalizedString(context),
+        type: SnackbarType.error,
+      );
+      rethrow;
+    }
+    if (!context.mounted) return;
+    if (matrix.voiceMessageEventId.value != widget.event.eventId) return;
+
+    final audioPlayer = matrix.audioPlayer = AudioPlayer();
+
+    if (file != null) {
+      audioPlayer.setFilePath(file.path);
+    } else {
+      await audioPlayer.setAudioSource(MatrixFileAudioSource(matrixFile));
+    }
+
+    audioPlayer.play().onError(
+          ErrorReporter(context, L10n.of(context).error)
+              .onErrorCallback,
+        );
+  }
+
+  void _toggleSpeed() async {
+    final audioPlayer = matrix.audioPlayer;
+    if (audioPlayer == null) return;
+    switch (audioPlayer.speed) {
+      case 0.5:
+        await audioPlayer.setSpeed(1.0);
+        break;
+      case 1.0:
+        await audioPlayer.setSpeed(1.5);
+        break;
+      case 1.5:
+        await audioPlayer.setSpeed(2.0);
+        break;
+      case 2.0:
+        await audioPlayer.setSpeed(0.5);
+        break;
+      default:
+        await audioPlayer.setSpeed(1.0);
+        break;
+    }
+    setState(() {});
+  }
+
+  List<int>? _getWaveform() {
+    final eventWaveForm = widget.event.content
+        .tryGetMap<String, dynamic>('org.matrix.msc1767.audio')
+        ?.tryGetList<int>('waveform');
+    if (eventWaveForm == null || eventWaveForm.isEmpty) {
+      return null;
+    }
+    while (eventWaveForm.length < AudioPlayerWidget.wavesCount) {
+      for (var i = 0; i < eventWaveForm.length; i = i + 2) {
+        eventWaveForm.insert(i, eventWaveForm[i]);
+      }
+    }
+    var i = 0;
+    final step = (eventWaveForm.length / AudioPlayerWidget.wavesCount).round();
+    while (eventWaveForm.length > AudioPlayerWidget.wavesCount) {
+      eventWaveForm.removeAt(i);
+      i = (i + step) % AudioPlayerWidget.wavesCount;
+    }
+    return eventWaveForm.map((i) => i > 1024 ? 1024 : i).toList();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    matrix = Matrix.of(context);
+    _waveform = _getWaveform();
+
+    if (matrix.voiceMessageEventId.value == widget.event.eventId &&
+        matrix.audioPlayer != null) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        ScaffoldMessenger.of(matrix.context).clearMaterialBanners();
+      });
+    }
+
+    final durationInt = widget.event.content
+        .tryGetMap<String, dynamic>('info')
+        ?.tryGet<int>('duration');
+    if (durationInt != null) {
+      final duration = Duration(milliseconds: durationInt);
+      _durationString = duration.minuteSecondString;
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final waveform = _waveform;
+    final isOwnMessage =
+        widget.event.senderId == widget.event.room.client.userID;
+
+    return ValueListenableBuilder(
+      valueListenable: matrix.voiceMessageEventId,
+      builder: (context, eventId, _) {
+        final audioPlayer =
+            eventId != widget.event.eventId ? null : matrix.audioPlayer;
+
+        final fileDescription = widget.event.fileDescription;
+
+        return StreamBuilder<Object>(
+          stream: audioPlayer == null
+              ? null
+              : StreamGroup.merge([
+                  audioPlayer.positionStream.asBroadcastStream(),
+                  audioPlayer.playerStateStream.asBroadcastStream(),
+                ]),
+          builder: (context, _) {
+            final maxPosition =
+                audioPlayer?.duration?.inMilliseconds.toDouble() ?? 1.0;
+            var currentPosition =
+                audioPlayer?.position.inMilliseconds.toDouble() ?? 0.0;
+            if (currentPosition > maxPosition) currentPosition = maxPosition;
+
+            final wavePosition =
+                (currentPosition / maxPosition) * AudioPlayerWidget.wavesCount;
+
+            final statusText = audioPlayer == null
+                ? _durationString ?? '00:00'
+                : audioPlayer.position.minuteSecondString;
+            return Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  ConstrainedBox(
+                    constraints: const BoxConstraints(
+                      maxWidth: FluffyThemes.columnWidth,
+                    ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        // Play/Pause button — refined circular style
+                        SizedBox(
+                          width: buttonSize,
+                          height: buttonSize,
+                          child: status == AudioPlayerStatus.downloading
+                              ? CircularProgressIndicator(
+                                  strokeWidth: 2,
+                                  color: widget.color,
+                                )
+                              : InkWell(
+                                  borderRadius: BorderRadius.circular(64),
+                                  onLongPress: () =>
+                                      widget.event.saveFile(context),
+                                  onTap: _onButtonTap,
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      color: widget.color.withAlpha(40),
+                                      shape: BoxShape.circle,
+                                      border: Border.all(
+                                        color: widget.color.withAlpha(60),
+                                        width: 1,
+                                      ),
+                                    ),
+                                    child: AnimatedSwitcher(
+                                      duration:
+                                          const Duration(milliseconds: 150),
+                                      transitionBuilder: (child, anim) =>
+                                          ScaleTransition(
+                                        scale: anim,
+                                        child: child,
+                                      ),
+                                      child: Icon(
+                                        audioPlayer?.playing == true &&
+                                                audioPlayer?.isAtEndPosition ==
+                                                    false
+                                            ? Icons.pause_rounded
+                                            : Icons.play_arrow_rounded,
+                                        key: ValueKey(
+                                          audioPlayer?.playing == true &&
+                                              audioPlayer?.isAtEndPosition ==
+                                                  false,
+                                        ),
+                                        color: widget.color,
+                                        size: 22,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                        ),
+                        const SizedBox(width: 8),
+                        // Waveform + Slider overlay (same structure, refined)
+                        Expanded(
+                          child: Stack(
+                            children: [
+                              if (waveform != null)
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 16.0,
+                                  ),
+                                  child: Row(
+                                    children: [
+                                      for (var i = 0;
+                                          i < AudioPlayerWidget.wavesCount;
+                                          i++)
+                                        Expanded(
+                                          child: Container(
+                                            height: 32,
+                                            alignment: Alignment.center,
+                                            child: AnimatedContainer(
+                                              duration: const Duration(
+                                                  milliseconds: 80),
+                                              margin:
+                                                  const EdgeInsets.symmetric(
+                                                horizontal: 0.8,
+                                              ),
+                                              decoration: BoxDecoration(
+                                                color: i < wavePosition
+                                                    ? widget.color
+                                                    : widget.color
+                                                        .withAlpha(60),
+                                                borderRadius:
+                                                    BorderRadius.circular(3),
+                                              ),
+                                              height:
+                                                  (32 * (waveform[i] / 1024))
+                                                      .clamp(3.0, 32.0),
+                                            ),
+                                          ),
+                                        ),
+                                    ],
+                                  ),
+                                ),
+                              SizedBox(
+                                height: 32,
+                                child: SliderTheme(
+                                  data: SliderThemeData(
+                                    thumbShape:
+                                        const RoundSliderThumbShape(
+                                      enabledThumbRadius: 5,
+                                    ),
+                                    overlayShape:
+                                        const RoundSliderOverlayShape(
+                                      overlayRadius: 12,
+                                    ),
+                                    trackHeight: 2.5,
+                                    thumbColor: isOwnMessage
+                                        ? theme.colorScheme.onPrimary
+                                        : theme.colorScheme.primary,
+                                    activeTrackColor: waveform == null
+                                        ? widget.color
+                                        : Colors.transparent,
+                                    inactiveTrackColor: waveform == null
+                                        ? widget.color.withAlpha(60)
+                                        : Colors.transparent,
+                                    overlayColor:
+                                        widget.color.withAlpha(30),
+                                  ),
+                                  child: Slider(
+                                    max: maxPosition,
+                                    value: currentPosition,
+                                    onChanged: (position) =>
+                                        audioPlayer == null
+                                            ? _onButtonTap()
+                                            : audioPlayer.seek(
+                                                Duration(
+                                                  milliseconds:
+                                                      position.round(),
+                                                ),
+                                              ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const SizedBox(width: 6),
+                        // Duration text
+                        SizedBox(
+                          width: 36,
+                          child: Text(
+                            statusText,
+                            style: TextStyle(
+                              color: widget.color.withAlpha(180),
+                              fontSize: 11,
+                              fontWeight: FontWeight.w500,
+                              fontFamily: 'Montserrat',
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 6),
+                        // Mic icon or Speed control
+                        AnimatedCrossFade(
+                          firstChild: Padding(
+                            padding: const EdgeInsets.only(right: 4.0),
+                            child: Icon(
+                              Icons.mic_none_rounded,
+                              color: widget.color.withAlpha(120),
+                              size: 20,
+                            ),
+                          ),
+                          secondChild: GestureDetector(
+                            onTap: _toggleSpeed,
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 7,
+                                vertical: 3,
+                              ),
+                              decoration: BoxDecoration(
+                                color: widget.color.withAlpha(30),
+                                borderRadius: BorderRadius.circular(10),
+                                border: Border.all(
+                                  color: widget.color.withAlpha(50),
+                                  width: 0.8,
+                                ),
+                              ),
+                              child: AnimatedSwitcher(
+                                duration: const Duration(milliseconds: 120),
+                                transitionBuilder: (child, anim) =>
+                                    FadeTransition(
+                                  opacity: anim,
+                                  child: ScaleTransition(
+                                    scale: anim,
+                                    child: child,
+                                  ),
+                                ),
+                                child: Text(
+                                  '${audioPlayer?.speed.toStringAsFixed(1)}x',
+                                  key: ValueKey(audioPlayer?.speed),
+                                  style: TextStyle(
+                                    color: widget.color,
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.w700,
+                                    fontFamily: 'Montserrat',
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          alignment: Alignment.center,
+                          crossFadeState: audioPlayer == null
+                              ? CrossFadeState.showFirst
+                              : CrossFadeState.showSecond,
+                          duration: FluffyThemes.animationDuration,
+                        ),
+                      ],
+                    ),
+                  ),
+                  if (fileDescription != null) ...[
+                    const SizedBox(height: 8),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16,
+                        vertical: 8,
+                      ),
+                      child: Linkify(
+                        text: fileDescription,
+                        textScaleFactor:
+                            MediaQuery.textScalerOf(context).scale(1),
+                        style: TextStyle(
+                          color: widget.color,
+                          fontSize: widget.fontSize,
+                        ),
+                        options: const LinkifyOptions(humanize: false),
+                        linkStyle: TextStyle(
+                          color: widget.linkColor,
+                          fontSize: widget.fontSize,
+                          decoration: TextDecoration.underline,
+                          decorationColor: widget.linkColor,
+                        ),
+                        onOpen: (url) =>
+                            UrlLauncher(context, url.url).launchUrl(),
+                      ),
+                    ),
+                  ],
+                ],
+              ),
+            );
+          },
+        );
+      },
+    );
+  }
+}
+
+/// To use a MatrixFile as an AudioSource for the just_audio package
+class MatrixFileAudioSource extends StreamAudioSource {
+  final MatrixFile file;
+
+  MatrixFileAudioSource(this.file);
+
+  @override
+  Future<StreamAudioResponse> request([int? start, int? end]) async {
+    start ??= 0;
+    end ??= file.bytes.length;
+    return StreamAudioResponse(
+      sourceLength: file.bytes.length,
+      contentLength: end - start,
+      offset: start,
+      stream: Stream.value(file.bytes.sublist(start, end)),
+      contentType: file.mimeType,
+    );
+  }
+}
+
+extension on AudioPlayer {
+  bool get isAtEndPosition {
+    final duration = this.duration;
+    if (duration == null) return true;
+    return position >= duration;
+  }
+}
+
+extension on Duration {
+  String get minuteSecondString =>
+      '${inMinutes.toString().padLeft(2, '0')}:${(inSeconds % 60).toString().padLeft(2, '0')}';
+}

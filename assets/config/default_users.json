@@ -1,0 +1,15 @@
+{
+  "dev_base_url": "https://dev-backend.be-mindpower.net/api",
+  "email_users": [
+    {
+      "username": "testuser",
+      "password": "testpass123"
+    }
+  ],
+  "phone_users": [
+    {
+      "phone": "+1234567890",
+      "pin": "1234"
+    }
+  ]
+}

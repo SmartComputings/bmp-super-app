@@ -1,0 +1,10 @@
+{
+  "application_name": "Be-Mindpower Super App",
+  "application_welcome_message": null,
+  "default_homeserver": "server.be-mindpower.net",
+  "web_base_url": "http://server.be-mindpower.net/web",
+  "privacy_url": "http://server.be-mindpower.net/privacy",
+  "render_html": false,
+  "hide_redacted_events": false,
+  "hide_unknown_events": false
+}

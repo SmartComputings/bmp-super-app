@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "929760111027",
+    "project_id": "be-mindpower",
+    "storage_bucket": "be-mindpower.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:929760111027:android:3060ca2bf07852527d43c6",
+        "android_client_info": {
+          "package_name": "chat.bemindepower.bmpchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "929760111027-ip08b5svbgm07lj5b32ig39v7pdmrj5e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDg_VlpLRadEzpIUrIu5H6xQuRD_fj9gAM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "929760111027-ip08b5svbgm07lj5b32ig39v7pdmrj5e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "929760111027-32hinvh4jhv7hbapho4v5ttm0kfgihbe.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "im.fluffychat.fluffychat"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

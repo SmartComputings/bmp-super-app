@@ -1,0 +1,1937 @@
+{
+  "AFG": {
+    "required_field": "tin",
+    "format": {
+      "pattern": null,
+      "length": null,
+      "description": "Format not publicly standardized",
+      "notes": "Tax identification number format varies"
+    }
+  },
+  "ALB": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^[A-Z]\\d{8}[A-Z]$",
+      "length": 10,
+      "description": "1 letter, 8 digits, 1 letter (e.g., K12345678L)",
+      "notes": "Albanian tax identification number"
+    }
+  },
+  "DZA": {
+    "required_field": "nif",
+    "format": {
+      "pattern": "^\\d{15}$",
+      "length": 15,
+      "description": "15 digits (e.g., 123456789012345)",
+      "notes": "Algerian tax identification number"
+    }
+  },
+  "ASM": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^\\d{9}$",
+      "length": 9,
+      "description": "9 digits (e.g., 123456789)",
+      "notes": "US passport format for American Samoa"
+    }
+  },
+  "AND": {
+    "required_field": "other",
+    "format": {
+      "pattern": null,
+      "length": null,
+      "description": "Format not publicly standardized",
+      "notes": "Various ID types accepted"
+    }
+  },
+  "AGO": {
+    "required_field": "nif",
+    "format": {
+      "pattern": "^\\d{9}$",
+      "length": 9,
+      "description": "9 digits (e.g., 123456789)",
+      "notes": "Angolan tax identification number"
+    }
+  },
+  "AIA": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]{2}\\d{6}$",
+      "length": 8,
+      "description": "2 letters, 6 digits (e.g., AB123456)",
+      "notes": "British overseas territory passport"
+    }
+  },
+  "ATG": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., A1234567)",
+      "notes": "Antigua and Barbuda passport"
+    }
+  },
+  "ARG": {
+    "required_field": "cuil",
+    "format": {
+      "pattern": "^\\d{2}-\\d{8}-\\d$",
+      "length": 13,
+      "description": "2 digits, hyphen, 8 digits, hyphen, 1 digit (e.g., 20-12345678-9)",
+      "notes": "Hyphen sometimes omitted"
+    }
+  },
+  "ARM": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{8}$",
+      "length": 8,
+      "description": "8 digits (e.g., 12345678)",
+      "notes": "Armenian tax identification number"
+    }
+  },
+  "ABW": {
+    "required_field": "other",
+    "format": {
+      "pattern": null,
+      "length": null,
+      "description": "Format not publicly standardized",
+      "notes": "Various ID types accepted"
+    }
+  },
+  "AUS": {
+    "required_field": "tfn",
+    "format": {
+      "pattern": "^\\d{3} \\d{3} \\d{3}$",
+      "length": 11,
+      "description": "9 digits with spaces (e.g., 123 456 789)",
+      "notes": "Spaces optional, check digit validation"
+    }
+  },
+  "AUT": {
+    "required_field": "si",
+    "format": {
+      "pattern": "^\\d{4} \\d{6}$",
+      "length": 11,
+      "description": "4 digits, space, 6 digits (e.g., 1234 567890)",
+      "notes": "Austrian social insurance number"
+    }
+  },
+  "AZE": {
+    "required_field": "voen",
+    "format": {
+      "pattern": "^\\d{10}$",
+      "length": 10,
+      "description": "10 digits (e.g., 1234567890)",
+      "notes": "Azerbaijan tax identification number"
+    }
+  },
+  "BHS": {
+    "required_field": "other",
+    "format": {
+      "pattern": null,
+      "length": null,
+      "description": "Format not publicly standardized",
+      "notes": "Various ID types accepted"
+    }
+  },
+  "BHR": {
+    "required_field": "cpr",
+    "format": {
+      "pattern": "^\\d{9}$",
+      "length": 9,
+      "description": "9 digits (e.g., 123456789)",
+      "notes": "Bahrain civil personal registration"
+    }
+  },
+  "BGD": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{12}$",
+      "length": 12,
+      "description": "12 digits (e.g., 123456789012)",
+      "notes": "Bangladesh tax identification number"
+    }
+  },
+  "BRB": {
+    "required_field": "nrn",
+    "format": {
+      "pattern": "^\\d{6}-\\d{4}$",
+      "length": 11,
+      "description": "6 digits, hyphen, 4 digits (e.g., 123456-7890)",
+      "notes": "Barbados national registration number"
+    }
+  },
+  "BLR": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]{2}\\d{7}$",
+      "length": 9,
+      "description": "2 letters, 7 digits (e.g., AB1234567)",
+      "notes": "Belarus passport number"
+    }
+  },
+  "BEL": {
+    "required_field": "nrn",
+    "format": {
+      "pattern": "^\\d{2}\\.\\d{2}\\.\\d{2}-\\d{3}\\.\\d{2}$",
+      "length": 15,
+      "description": "YY.MM.DD-XXX.CC format (e.g., 85.07.30-123.45)",
+      "notes": "Belgian national registry number with birth date"
+    }
+  },
+  "BLZ": {
+    "required_field": "other",
+    "format": {
+      "pattern": null,
+      "length": null,
+      "description": "Format not publicly standardized",
+      "notes": "Various ID types accepted"
+    }
+  },
+  "BEN": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., A1234567)",
+      "notes": "Benin passport number"
+    }
+  },
+  "BMU": {
+    "required_field": "other",
+    "format": {
+      "pattern": null,
+      "length": null,
+      "description": "Format not publicly standardized",
+      "notes": "Various ID types accepted"
+    }
+  },
+  "BTN": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., B1234567)",
+      "notes": "Bhutan passport number"
+    }
+  },
+  "BOL": {
+    "required_field": "nit",
+    "format": {
+      "pattern": "^\\d{7,8}$",
+      "length": 8,
+      "description": "7-8 digits (e.g., 12345678)",
+      "notes": "Bolivia tax identification number"
+    }
+  },
+  "BIH": {
+    "required_field": "jmbg",
+    "format": {
+      "pattern": "^\\d{13}$",
+      "length": 13,
+      "description": "13 digits (e.g., 1234567890123)",
+      "notes": "Unique master citizen number"
+    }
+  },
+  "BWA": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{10}$",
+      "length": 10,
+      "description": "10 digits (e.g., 1234567890)",
+      "notes": "Botswana tax identification number"
+    }
+  },
+  "BRA": {
+    "required_field": "cpf",
+    "format": {
+      "pattern": "^\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}$",
+      "length": 14,
+      "description": "XXX.XXX.XXX-XX format (e.g., 123.456.789-01)",
+      "notes": "Dots and hyphen sometimes omitted"
+    }
+  },
+  "VGB": {
+    "required_field": "other",
+    "format": {
+      "pattern": null,
+      "length": null,
+      "description": "Format not publicly standardized",
+      "notes": "Various ID types accepted"
+    }
+  },
+  "BRN": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{6}$",
+      "length": 7,
+      "description": "1 letter, 6 digits (e.g., B123456)",
+      "notes": "Brunei passport number"
+    }
+  },
+  "BGR": {
+    "required_field": "ucn",
+    "format": {
+      "pattern": "^\\d{10}$",
+      "length": 10,
+      "description": "10 digits (e.g., 1234567890)",
+      "notes": "Bulgarian uniform civil number"
+    }
+  },
+  "BFA": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., B1234567)",
+      "notes": "Burkina Faso passport number"
+    }
+  },
+  "BDI": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., B1234567)",
+      "notes": "Burundi passport number"
+    }
+  },
+  "CPV": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., C1234567)",
+      "notes": "Cabo Verde passport number"
+    }
+  },
+  "KHM": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{9}$",
+      "length": 9,
+      "description": "9 digits (e.g., 123456789)",
+      "notes": "Cambodia tax identification number"
+    }
+  },
+  "CMR": {
+    "required_field": "nif",
+    "format": {
+      "pattern": "^\\d{13}$",
+      "length": 13,
+      "description": "13 digits (e.g., 1234567890123)",
+      "notes": "Cameroon tax identification number"
+    }
+  },
+  "CAN": {
+    "required_field": "sin",
+    "format": {
+      "pattern": "^\\d{3} \\d{3} \\d{3}$",
+      "length": 11,
+      "description": "XXX XXX XXX format (e.g., 123 456 789)",
+      "notes": "Spaces sometimes omitted, Luhn algorithm validation"
+    }
+  }
+  ,"CYM": {
+    "required_field": "other",
+    "format": {
+      "pattern": null,
+      "length": null,
+      "description": "Format not publicly standardized",
+      "notes": "Various ID types accepted"
+    }
+  },
+  "CAF": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., C1234567)",
+      "notes": "Central African Republic passport"
+    }
+  },
+  "TCD": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., T1234567)",
+      "notes": "Chad passport number"
+    }
+  },
+  "CHL": {
+    "required_field": "rut",
+    "format": {
+      "pattern": "^\\d{1,2}\\.\\d{3}\\.\\d{3}-[\\dK]$",
+      "length": 12,
+      "description": "XX.XXX.XXX-X format (e.g., 12.345.678-9)",
+      "notes": "Check digit can be K, dots and hyphen sometimes omitted"
+    }
+  },
+  "CHN": {
+    "required_field": "ricn",
+    "format": {
+      "pattern": "^\\d{18}$",
+      "length": 18,
+      "description": "18 digits (e.g., 123456789012345678)",
+      "notes": "Chinese resident identity card number"
+    }
+  },
+  "CXR": {
+    "required_field": "tfn",
+    "format": {
+      "pattern": "^\\d{3} \\d{3} \\d{3}$",
+      "length": 11,
+      "description": "9 digits with spaces (e.g., 123 456 789)",
+      "notes": "Australian TFN format"
+    }
+  },
+  "COL": {
+    "required_field": "nit",
+    "format": {
+      "pattern": "^\\d{8,10}-\\d$",
+      "length": 12,
+      "description": "8-10 digits, hyphen, 1 check digit (e.g., 123456789-0)",
+      "notes": "Hyphen sometimes omitted"
+    }
+  },
+  "COM": {
+    "required_field": "nif",
+    "format": {
+      "pattern": null,
+      "length": null,
+      "description": "Format not publicly standardized",
+      "notes": "Comoros tax identification number"
+    }
+  },
+  "COG": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., C1234567)",
+      "notes": "Congo passport number"
+    }
+  },
+  "COD": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., C1234567)",
+      "notes": "Democratic Republic of Congo passport"
+    }
+  },
+  "CRI": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{10}$",
+      "length": 10,
+      "description": "10 digits (e.g., 1234567890)",
+      "notes": "Costa Rica tax identification number"
+    }
+  },
+  "CIV": {
+    "required_field": "nif",
+    "format": {
+      "pattern": "^\\d{10}$",
+      "length": 10,
+      "description": "10 digits (e.g., 1234567890)",
+      "notes": "Côte d'Ivoire tax identification number"
+    }
+  },
+  "HRV": {
+    "required_field": "oib",
+    "format": {
+      "pattern": "^\\d{11}$",
+      "length": 11,
+      "description": "11 digits (e.g., 12345678901)",
+      "notes": "Croatian personal identification number"
+    }
+  },
+  "CUB": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{6}$",
+      "length": 7,
+      "description": "1 letter, 6 digits (e.g., C123456)",
+      "notes": "Cuba passport number"
+    }
+  },
+  "CUW": {
+    "required_field": "crib",
+    "format": {
+      "pattern": "^\\d{9}$",
+      "length": 9,
+      "description": "9 digits (e.g., 123456789)",
+      "notes": "Curaçao civil registration number"
+    }
+  },
+  "CYP": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{8}[A-Z]$",
+      "length": 9,
+      "description": "8 digits, 1 letter (e.g., 12345678A)",
+      "notes": "Cyprus tax identification number"
+    }
+  },
+  "CZE": {
+    "required_field": "rc",
+    "format": {
+      "pattern": "^\\d{6}/\\d{3,4}$",
+      "length": 11,
+      "description": "YYMMDD/XXX or YYMMDD/XXXX (e.g., 850730/123)",
+      "notes": "Birth number with optional 4th digit"
+    }
+  },
+  "DNK": {
+    "required_field": "cpr",
+    "format": {
+      "pattern": "^\\d{6}-\\d{4}$",
+      "length": 11,
+      "description": "DDMMYY-XXXX format (e.g., 300785-1234)",
+      "notes": "Danish civil personal registration"
+    }
+  },
+  "DJI": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., D1234567)",
+      "notes": "Djibouti passport number"
+    }
+  },
+  "DMA": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{9}$",
+      "length": 9,
+      "description": "9 digits (e.g., 123456789)",
+      "notes": "Dominica tax identification number"
+    }
+  },
+  "DOM": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{11}$",
+      "length": 11,
+      "description": "11 digits (e.g., 12345678901)",
+      "notes": "Dominican Republic tax identification"
+    }
+  },
+  "ECU": {
+    "required_field": "ruc",
+    "format": {
+      "pattern": "^\\d{13}$",
+      "length": 13,
+      "description": "13 digits (e.g., 1234567890123)",
+      "notes": "Ecuador unique taxpayer registry"
+    }
+  },
+  "EGY": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{9}$",
+      "length": 9,
+      "description": "9 digits (e.g., 123456789)",
+      "notes": "Egypt tax identification number"
+    }
+  },
+  "SLV": {
+    "required_field": "nit",
+    "format": {
+      "pattern": "^\\d{4}-\\d{6}-\\d{3}-\\d$",
+      "length": 17,
+      "description": "XXXX-XXXXXX-XXX-X format (e.g., 1234-567890-123-4)",
+      "notes": "El Salvador tax identification"
+    }
+  },
+  "GNQ": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., E1234567)",
+      "notes": "Equatorial Guinea passport"
+    }
+  },
+  "ERI": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., E1234567)",
+      "notes": "Eritrea passport number"
+    }
+  },
+  "EST": {
+    "required_field": "ik",
+    "format": {
+      "pattern": "^\\d{11}$",
+      "length": 11,
+      "description": "11 digits (e.g., 12345678901)",
+      "notes": "Estonian personal identification code"
+    }
+  },
+  "SWZ": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., S1234567)",
+      "notes": "eSwatini passport number"
+    }
+  },
+  "ETH": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{10}$",
+      "length": 10,
+      "description": "10 digits (e.g., 1234567890)",
+      "notes": "Ethiopia tax identification number"
+    }
+  },
+  "FRO": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., F1234567)",
+      "notes": "Faroe Islands passport"
+    }
+  },
+  "FJI": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{9}$",
+      "length": 9,
+      "description": "9 digits (e.g., 123456789)",
+      "notes": "Fiji tax identification number"
+    }
+  },
+  "FIN": {
+    "required_field": "hetu",
+    "format": {
+      "pattern": "^\\d{6}[+-A]\\d{3}[\\dA-Z]$",
+      "length": 11,
+      "description": "DDMMYY+XXX[0-9A-Z] (e.g., 300785+123A)",
+      "notes": "Finnish personal identity code with century marker"
+    }
+  },
+  "FRA": {
+    "required_field": "spi",
+    "format": {
+      "pattern": "^[12]\\d{12}$",
+      "length": 13,
+      "description": "13 digits starting with 1 or 2 (e.g., 1234567890123)",
+      "notes": "French social security number"
+    }
+  },
+  "GAB": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., G1234567)",
+      "notes": "Gabon passport number"
+    }
+  },
+  "GMB": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., G1234567)",
+      "notes": "Gambia passport number"
+    }
+  },
+  "GEO": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{9}$",
+      "length": 9,
+      "description": "9 digits (e.g., 123456789)",
+      "notes": "Georgia tax identification number"
+    }
+  },
+  "DEU": {
+    "required_field": "steuer_id",
+    "format": {
+      "pattern": "^\\d{11}$",
+      "length": 11,
+      "description": "11 digits (e.g., 12345678901)",
+      "notes": "German tax identification number"
+    }
+  },
+  "GHA": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^[A-Z]\\d{9}$",
+      "length": 10,
+      "description": "1 letter, 9 digits (e.g., G123456789)",
+      "notes": "Ghana tax identification number"
+    }
+  },
+  "GIB": {
+    "required_field": "crc",
+    "format": {
+      "pattern": "^\\d{5}[A-Z]$",
+      "length": 6,
+      "description": "5 digits, 1 letter (e.g., 12345A)",
+      "notes": "Gibraltar certificate of registration"
+    }
+  },
+  "GRC": {
+    "required_field": "aom",
+    "format": {
+      "pattern": "^\\d{9}$",
+      "length": 9,
+      "description": "9 digits (e.g., 123456789)",
+      "notes": "Greek tax registration number"
+    }
+  },
+  "GRL": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., G1234567)",
+      "notes": "Greenland passport number"
+    }
+  },
+  "GRD": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., G1234567)",
+      "notes": "Grenada passport number"
+    }
+  },
+  "GUM": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^\\d{9}$",
+      "length": 9,
+      "description": "9 digits (e.g., 123456789)",
+      "notes": "US passport format for Guam"
+    }
+  },
+  "GTM": {
+    "required_field": "nit",
+    "format": {
+      "pattern": "^\\d{7,8}-\\d$",
+      "length": 10,
+      "description": "7-8 digits, hyphen, 1 check digit (e.g., 1234567-8)",
+      "notes": "Guatemala tax identification"
+    }
+  },
+  "GGY": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]{2}\\d{6}$",
+      "length": 8,
+      "description": "2 letters, 6 digits (e.g., GG123456)",
+      "notes": "Guernsey passport number"
+    }
+  },
+  "GIN": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., G1234567)",
+      "notes": "Guinea passport number"
+    }
+  },
+  "GNB": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., G1234567)",
+      "notes": "Guinea-Bissau passport number"
+    }
+  },
+  "GUY": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., G1234567)",
+      "notes": "Guyana passport number"
+    }
+  },
+  "HTI": {
+    "required_field": "nif",
+    "format": {
+      "pattern": "^\\d{9}$",
+      "length": 9,
+      "description": "9 digits (e.g., 123456789)",
+      "notes": "Haiti tax identification number"
+    }
+  },
+  "HND": {
+    "required_field": "rtn",
+    "format": {
+      "pattern": "^\\d{14}$",
+      "length": 14,
+      "description": "14 digits (e.g., 12345678901234)",
+      "notes": "Honduras tax registration number"
+    }
+  },
+  "HKG": {
+    "required_field": "hkid",
+    "format": {
+      "pattern": "^[A-Z]{1,2}\\d{6}\\([\\dA]\\)$",
+      "length": 10,
+      "description": "1-2 letters, 6 digits, (check digit) (e.g., A123456(7))",
+      "notes": "Hong Kong identity card with parentheses"
+    }
+  },
+  "HUN": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{8}-[12]-\\d{2}$",
+      "length": 13,
+      "description": "8 digits, hyphen, 1 or 2, hyphen, 2 digits (e.g., 12345678-1-23)",
+      "notes": "Hungarian tax identification number"
+    }
+  },
+  "ISL": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{6}-\\d{4}$",
+      "length": 11,
+      "description": "6 digits, hyphen, 4 digits (e.g., 123456-7890)",
+      "notes": "Iceland tax identification number"
+    }
+  },
+  "IND": {
+    "required_field": "pan",
+    "format": {
+      "pattern": "^[A-Z]{5}\\d{4}[A-Z]$",
+      "length": 10,
+      "description": "5 letters, 4 digits, 1 letter (e.g., ABCDE1234F)",
+      "notes": "Indian permanent account number"
+    }
+  },
+  "IDN": {
+    "required_field": "npwp",
+    "format": {
+      "pattern": "^\\d{2}\\.\\d{3}\\.\\d{3}\\.\\d-\\d{3}\\.\\d{3}$",
+      "length": 20,
+      "description": "XX.XXX.XXX.X-XXX.XXX format (e.g., 12.345.678.9-012.345)",
+      "notes": "Indonesian taxpayer identification with dots and hyphen"
+    }
+  },
+  "IRQ": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{9}$",
+      "length": 9,
+      "description": "9 digits (e.g., 123456789)",
+      "notes": "Iraq tax identification number"
+    }
+  },
+  "IRL": {
+    "required_field": "ppsn",
+    "format": {
+      "pattern": "^\\d{7}[A-Z]{1,2}$",
+      "length": 9,
+      "description": "7 digits, 1-2 letters (e.g., 1234567A or 1234567AB)",
+      "notes": "Irish personal public service number"
+    }
+  },
+  "IMN": {
+    "required_field": "nino",
+    "format": {
+      "pattern": "^[A-Z]{2}\\d{6}[A-Z]$",
+      "length": 9,
+      "description": "2 letters, 6 digits, 1 letter (e.g., AB123456C)",
+      "notes": "Isle of Man national insurance number"
+    }
+  },
+  "ISR": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{9}$",
+      "length": 9,
+      "description": "9 digits (e.g., 123456789)",
+      "notes": "Israel tax identification number"
+    }
+  },
+  "ITA": {
+    "required_field": "cf",
+    "format": {
+      "pattern": "^[A-Z]{6}\\d{2}[A-Z]\\d{2}[A-Z]\\d{3}[A-Z]$",
+      "length": 16,
+      "description": "6 letters, 2 digits, 1 letter, 2 digits, 1 letter, 3 digits, 1 letter",
+      "notes": "Italian tax code with complex encoding"
+    }
+  },
+  "JAM": {
+    "required_field": "trn",
+    "format": {
+      "pattern": "^\\d{9}$",
+      "length": 9,
+      "description": "9 digits (e.g., 123456789)",
+      "notes": "Jamaica taxpayer registration number"
+    }
+  },
+  "JPN": {
+    "required_field": "mn",
+    "format": {
+      "pattern": "^\\d{4} \\d{4} \\d{4}$",
+      "length": 14,
+      "description": "12 digits with spaces (e.g., 1234 5678 9012)",
+      "notes": "Japanese My Number with spaces"
+    }
+  },
+  "JEY": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]{2}\\d{6}$",
+      "length": 8,
+      "description": "2 letters, 6 digits (e.g., JE123456)",
+      "notes": "Jersey passport number"
+    }
+  },
+  "JOR": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{9}$",
+      "length": 9,
+      "description": "9 digits (e.g., 123456789)",
+      "notes": "Jordan tax identification number"
+    }
+  },
+  "KAZ": {
+    "required_field": "iin",
+    "format": {
+      "pattern": "^\\d{12}$",
+      "length": 12,
+      "description": "12 digits (e.g., 123456789012)",
+      "notes": "Kazakhstan individual identification number"
+    }
+  },
+  "KEN": {
+    "required_field": "pin",
+    "format": {
+      "pattern": "^[A-Z]\\d{9}[A-Z]$",
+      "length": 11,
+      "description": "1 letter, 9 digits, 1 letter (e.g., A123456789B)",
+      "notes": "Kenya personal identification number"
+    }
+  },
+  "KIR": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., K1234567)",
+      "notes": "Kiribati passport number"
+    }
+  },
+  "KOR": {
+    "required_field": "rrn",
+    "format": {
+      "pattern": "^\\d{6}-\\d{7}$",
+      "length": 14,
+      "description": "YYMMDD-XXXXXXX format (e.g., 850730-1234567)",
+      "notes": "Korean resident registration number"
+    }
+  },
+  "XKX": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., K1234567)",
+      "notes": "Kosovo passport number"
+    }
+  },
+  "KWT": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{12}$",
+      "length": 12,
+      "description": "12 digits (e.g., 123456789012)",
+      "notes": "Kuwait tax identification number"
+    }
+  },
+  "KGZ": {
+    "required_field": "inn",
+    "format": {
+      "pattern": "^\\d{14}$",
+      "length": 14,
+      "description": "14 digits (e.g., 12345678901234)",
+      "notes": "Kyrgyzstan individual taxpayer number"
+    }
+  },
+  "LAO": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{9}$",
+      "length": 9,
+      "description": "9 digits (e.g., 123456789)",
+      "notes": "Laos tax identification number"
+    }
+  },
+  "LVA": {
+    "required_field": "pk",
+    "format": {
+      "pattern": "^\\d{6}-\\d{5}$",
+      "length": 12,
+      "description": "DDMMYY-XXXXX format (e.g., 300785-12345)",
+      "notes": "Latvian personal code"
+    }
+  },
+  "LBN": {
+    "required_field": "other",
+    "format": {
+      "pattern": null,
+      "length": null,
+      "description": "Format not publicly standardized",
+      "notes": "Various ID types accepted"
+    }
+  },
+  "LSO": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., L1234567)",
+      "notes": "Lesotho passport number"
+    }
+  },
+  "LBR": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{9}$",
+      "length": 9,
+      "description": "9 digits (e.g., 123456789)",
+      "notes": "Liberia tax identification number"
+    }
+  },
+  "LBY": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., L1234567)",
+      "notes": "Libya passport number"
+    }
+  },
+  "LIE": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., L1234567)",
+      "notes": "Liechtenstein passport number"
+    }
+  },
+  "LTU": {
+    "required_field": "ak",
+    "format": {
+      "pattern": "^\\d{11}$",
+      "length": 11,
+      "description": "11 digits (e.g., 12345678901)",
+      "notes": "Lithuanian personal code"
+    }
+  },
+  "LUX": {
+    "required_field": "matricule",
+    "format": {
+      "pattern": "^\\d{13}$",
+      "length": 13,
+      "description": "13 digits (e.g., 1234567890123)",
+      "notes": "Luxembourg social security number"
+    }
+  },
+  "MAC": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., M1234567)",
+      "notes": "Macao passport number"
+    }
+  },
+  "MDG": {
+    "required_field": "nif",
+    "format": {
+      "pattern": "^\\d{9}$",
+      "length": 9,
+      "description": "9 digits (e.g., 123456789)",
+      "notes": "Madagascar tax identification number"
+    }
+  },
+  "MWI": {
+    "required_field": "tpin",
+    "format": {
+      "pattern": "^\\d{10}$",
+      "length": 10,
+      "description": "10 digits (e.g., 1234567890)",
+      "notes": "Malawi taxpayer identification number"
+    }
+  },
+  "MYS": {
+    "required_field": "itr",
+    "format": {
+      "pattern": "^\\d{8}$",
+      "length": 8,
+      "description": "8 digits (e.g., 12345678)",
+      "notes": "Malaysia income tax number"
+    }
+  },
+  "MDV": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., M1234567)",
+      "notes": "Maldives passport number"
+    }
+  },
+  "MLI": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., M1234567)",
+      "notes": "Mali passport number"
+    }
+  },
+  "MLT": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{8}$",
+      "length": 8,
+      "description": "8 digits (e.g., 12345678)",
+      "notes": "Malta tax identification number"
+    }
+  },
+  "MHL": {
+    "required_field": "other",
+    "format": {
+      "pattern": null,
+      "length": null,
+      "description": "Format not publicly standardized",
+      "notes": "Various ID types accepted"
+    }
+  },
+  "MRT": {
+    "required_field": "nif",
+    "format": {
+      "pattern": "^\\d{9}$",
+      "length": 9,
+      "description": "9 digits (e.g., 123456789)",
+      "notes": "Mauritania tax identification number"
+    }
+  },
+  "MUS": {
+    "required_field": "nicn",
+    "format": {
+      "pattern": "^[A-Z]\\d{11}$",
+      "length": 12,
+      "description": "1 letter, 11 digits (e.g., M12345678901)",
+      "notes": "Mauritius national identity card number"
+    }
+  },
+  "MEX": {
+    "required_field": "rfc",
+    "format": {
+      "pattern": "^[A-Z]{4}\\d{6}[A-Z\\d]{3}$",
+      "length": 13,
+      "description": "4 letters, 6 digits, 3 alphanumeric (e.g., ABCD123456XYZ)",
+      "notes": "Mexican federal taxpayer registry"
+    }
+  },
+  "FSM": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., F1234567)",
+      "notes": "Micronesia passport number"
+    }
+  },
+  "MDA": {
+    "required_field": "idnp",
+    "format": {
+      "pattern": "^\\d{13}$",
+      "length": 13,
+      "description": "13 digits (e.g., 1234567890123)",
+      "notes": "Moldova state personal numerical code"
+    }
+  },
+  "MCO": {
+    "required_field": "other",
+    "format": {
+      "pattern": null,
+      "length": null,
+      "description": "Format not publicly standardized",
+      "notes": "Various ID types accepted"
+    }
+  },
+  "MNG": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., M1234567)",
+      "notes": "Mongolia passport number"
+    }
+  },
+  "MNE": {
+    "required_field": "jmbg",
+    "format": {
+      "pattern": "^\\d{13}$",
+      "length": 13,
+      "description": "13 digits (e.g., 1234567890123)",
+      "notes": "Montenegro unique master citizen number"
+    }
+  },
+  "MSR": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., M1234567)",
+      "notes": "Montserrat passport number"
+    }
+  },
+  "MAR": {
+    "required_field": "if",
+    "format": {
+      "pattern": "^\\d{8}$",
+      "length": 8,
+      "description": "8 digits (e.g., 12345678)",
+      "notes": "Morocco tax identification number"
+    }
+  },
+  "MOZ": {
+    "required_field": "nuit",
+    "format": {
+      "pattern": "^\\d{9}$",
+      "length": 9,
+      "description": "9 digits (e.g., 123456789)",
+      "notes": "Mozambique single tax identification number"
+    }
+  },
+  "MMR": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., M1234567)",
+      "notes": "Myanmar passport number"
+    }
+  },
+  "NAM": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{10}$",
+      "length": 10,
+      "description": "10 digits (e.g., 1234567890)",
+      "notes": "Namibia tax identification number"
+    }
+  },
+  "NRU": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., N1234567)",
+      "notes": "Nauru passport number"
+    }
+  },
+  "NPL": {
+    "required_field": "pan",
+    "format": {
+      "pattern": "^\\d{9}$",
+      "length": 9,
+      "description": "9 digits (e.g., 123456789)",
+      "notes": "Nepal permanent account number"
+    }
+  },
+  "NLD": {
+    "required_field": "bsn",
+    "format": {
+      "pattern": "^\\d{9}$",
+      "length": 9,
+      "description": "9 digits (e.g., 123456789)",
+      "notes": "Netherlands citizen service number"
+    }
+  },
+  "NZL": {
+    "required_field": "ird",
+    "format": {
+      "pattern": "^\\d{2}-\\d{3}-\\d{3}$",
+      "length": 11,
+      "description": "XX-XXX-XXX format (e.g., 12-345-678)",
+      "notes": "New Zealand inland revenue number"
+    }
+  },
+  "NIC": {
+    "required_field": "ruc",
+    "format": {
+      "pattern": "^\\d{14}$",
+      "length": 14,
+      "description": "14 digits (e.g., 12345678901234)",
+      "notes": "Nicaragua unique taxpayer registry"
+    }
+  },
+  "NER": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., N1234567)",
+      "notes": "Niger passport number"
+    }
+  },
+  "NGA": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{8}-\\d{4}$",
+      "length": 13,
+      "description": "8 digits, hyphen, 4 digits (e.g., 12345678-9012)",
+      "notes": "Nigeria tax identification number"
+    }
+  },
+  "MKD": {
+    "required_field": "embg",
+    "format": {
+      "pattern": "^\\d{13}$",
+      "length": 13,
+      "description": "13 digits (e.g., 1234567890123)",
+      "notes": "North Macedonia unique master citizen number"
+    }
+  },
+  "NOR": {
+    "required_field": "fn",
+    "format": {
+      "pattern": "^\\d{6} \\d{5}$",
+      "length": 12,
+      "description": "DDMMYY XXXXX format (e.g., 300785 12345)",
+      "notes": "Norwegian national identity number"
+    }
+  },
+  "OMN": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{8}$",
+      "length": 8,
+      "description": "8 digits (e.g., 12345678)",
+      "notes": "Oman tax identification number"
+    }
+  },
+  "PAK": {
+    "required_field": "ntn",
+    "format": {
+      "pattern": "^\\d{7}-\\d$",
+      "length": 9,
+      "description": "7 digits, hyphen, 1 digit check code (e.g., 4174941-3)",
+      "notes": "Hyphen sometimes omitted in informal usage"
+    }
+  },
+  "PLW": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., P1234567)",
+      "notes": "Palau passport number"
+    }
+  },
+  "PSE": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., P1234567)",
+      "notes": "Palestine passport number"
+    }
+  },
+  "PAN": {
+    "required_field": "ruc",
+    "format": {
+      "pattern": "^\\d{1,2}-\\d{1,4}-\\d{1,6}$",
+      "length": 15,
+      "description": "Variable format X-XXXX-XXXXXX (e.g., 8-123-456789)",
+      "notes": "Panama unique taxpayer registry"
+    }
+  },
+  "PNG": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., P1234567)",
+      "notes": "Papua New Guinea passport"
+    }
+  },
+  "PRY": {
+    "required_field": "ruc",
+    "format": {
+      "pattern": "^\\d{8}-\\d$",
+      "length": 10,
+      "description": "8 digits, hyphen, 1 check digit (e.g., 12345678-9)",
+      "notes": "Paraguay unique taxpayer registry"
+    }
+  },
+  "PER": {
+    "required_field": "ruc",
+    "format": {
+      "pattern": "^\\d{11}$",
+      "length": 11,
+      "description": "11 digits (e.g., 12345678901)",
+      "notes": "Peru unique taxpayer registry"
+    }
+  },
+  "PHL": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{3}-\\d{3}-\\d{3}-\\d{3}$",
+      "length": 15,
+      "description": "XXX-XXX-XXX-XXX format (e.g., 123-456-789-012)",
+      "notes": "Philippines tax identification number"
+    }
+  },
+  "POL": {
+    "required_field": "pesel",
+    "format": {
+      "pattern": "^\\d{11}$",
+      "length": 11,
+      "description": "11 digits (e.g., 12345678901)",
+      "notes": "Polish universal electronic system number"
+    }
+  },
+  "PRT": {
+    "required_field": "nif",
+    "format": {
+      "pattern": "^\\d{9}$",
+      "length": 9,
+      "description": "9 digits (e.g., 123456789)",
+      "notes": "Portugal tax identification number"
+    }
+  },
+  "PRI": {
+    "required_field": "ssn",
+    "format": {
+      "pattern": "^\\d{3}-\\d{2}-\\d{4}$",
+      "length": 11,
+      "description": "XXX-XX-XXXX format (e.g., 123-45-6789)",
+      "notes": "US Social Security Number format"
+    }
+  },
+  "QAT": {
+    "required_field": "qid",
+    "format": {
+      "pattern": "^\\d{11}$",
+      "length": 11,
+      "description": "11 digits (e.g., 12345678901)",
+      "notes": "Qatar ID number"
+    }
+  },
+  "ROU": {
+    "required_field": "cnp",
+    "format": {
+      "pattern": "^\\d{13}$",
+      "length": 13,
+      "description": "13 digits (e.g., 1234567890123)",
+      "notes": "Romanian personal numerical code"
+    }
+  },
+  "RUS": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^\\d{4} \\d{6}$",
+      "length": 11,
+      "description": "4 digits, space, 6 digits (e.g., 1234 567890)",
+      "notes": "Russian passport number"
+    }
+  },
+  "RWA": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{9}$",
+      "length": 9,
+      "description": "9 digits (e.g., 123456789)",
+      "notes": "Rwanda tax identification number"
+    }
+  },
+  "KNA": {
+    "required_field": "other",
+    "format": {
+      "pattern": null,
+      "length": null,
+      "description": "Format not publicly standardized",
+      "notes": "Various ID types accepted"
+    }
+  },
+  "LCA": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{9}$",
+      "length": 9,
+      "description": "9 digits (e.g., 123456789)",
+      "notes": "Saint Lucia tax identification number"
+    }
+  },
+  "MAF": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^\\d{2}[A-Z]{2}\\d{5}$",
+      "length": 9,
+      "description": "2 digits, 2 letters, 5 digits (e.g., 12AB34567)",
+      "notes": "French passport format"
+    }
+  },
+  "VCT": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{9}$",
+      "length": 9,
+      "description": "9 digits (e.g., 123456789)",
+      "notes": "Saint Vincent tax identification number"
+    }
+  },
+  "WSM": {
+    "required_field": "other",
+    "format": {
+      "pattern": null,
+      "length": null,
+      "description": "Format not publicly standardized",
+      "notes": "Various ID types accepted"
+    }
+  },
+  "SMR": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., S1234567)",
+      "notes": "San Marino passport number"
+    }
+  },
+  "STP": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., S1234567)",
+      "notes": "Sao Tome and Principe passport"
+    }
+  },
+  "SAU": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{10}$",
+      "length": 10,
+      "description": "10 digits (e.g., 1234567890)",
+      "notes": "Saudi Arabia tax identification number"
+    }
+  },
+  "SEN": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{13}$",
+      "length": 13,
+      "description": "13 digits (e.g., 1234567890123)",
+      "notes": "Senegal tax identification number"
+    }
+  },
+  "SRB": {
+    "required_field": "jmbg",
+    "format": {
+      "pattern": "^\\d{13}$",
+      "length": 13,
+      "description": "13 digits (e.g., 1234567890123)",
+      "notes": "Serbia unique master citizen number"
+    }
+  },
+  "SYC": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{7}$",
+      "length": 7,
+      "description": "7 digits (e.g., 1234567)",
+      "notes": "Seychelles tax identification number"
+    }
+  },
+  "SLE": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., S1234567)",
+      "notes": "Sierra Leone passport number"
+    }
+  },
+  "SGP": {
+    "required_field": "nric",
+    "format": {
+      "pattern": "^[STFG]\\d{7}[A-Z]$",
+      "length": 9,
+      "description": "1 letter (S/T/F/G), 7 digits, 1 letter (e.g., S1234567A)",
+      "notes": "Singapore national registration identity card"
+    }
+  },
+  "SVK": {
+    "required_field": "rc",
+    "format": {
+      "pattern": "^\\d{6}/\\d{3,4}$",
+      "length": 11,
+      "description": "YYMMDD/XXX or YYMMDD/XXXX (e.g., 850730/123)",
+      "notes": "Slovak birth number"
+    }
+  },
+  "SVN": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{8}$",
+      "length": 8,
+      "description": "8 digits (e.g., 12345678)",
+      "notes": "Slovenia tax identification number"
+    }
+  },
+  "SLB": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., S1234567)",
+      "notes": "Solomon Islands passport"
+    }
+  },
+  "SOM": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{9}$",
+      "length": 9,
+      "description": "9 digits (e.g., 123456789)",
+      "notes": "Somalia tax identification number"
+    }
+  },
+  "ZAF": {
+    "required_field": "itr",
+    "format": {
+      "pattern": "^\\d{10}$",
+      "length": 10,
+      "description": "10 digits (e.g., 1234567890)",
+      "notes": "South Africa income tax reference"
+    }
+  },
+  "SSD": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., S1234567)",
+      "notes": "South Sudan passport number"
+    }
+  },
+  "ESP": {
+    "required_field": "nif",
+    "format": {
+      "pattern": "^\\d{8}[A-Z]$",
+      "length": 9,
+      "description": "8 digits, 1 letter (e.g., 12345678A)",
+      "notes": "Spanish tax identification number"
+    }
+  },
+  "LKA": {
+    "required_field": "nic",
+    "format": {
+      "pattern": "^\\d{9}[VX]$",
+      "length": 10,
+      "description": "9 digits, V or X (e.g., 123456789V)",
+      "notes": "Sri Lanka national identity card"
+    }
+  },
+  "SDN": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., S1234567)",
+      "notes": "Sudan passport number"
+    }
+  },
+  "SUR": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{9}$",
+      "length": 9,
+      "description": "9 digits (e.g., 123456789)",
+      "notes": "Suriname tax identification number"
+    }
+  },
+  "SWE": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{6}-\\d{4}$",
+      "length": 11,
+      "description": "YYMMDD-XXXX format (e.g., 850730-1234)",
+      "notes": "Swedish tax identification number"
+    }
+  },
+  "CHE": {
+    "required_field": "avs",
+    "format": {
+      "pattern": "^756\\.\\d{4}\\.\\d{4}\\.\\d{2}$",
+      "length": 16,
+      "description": "756.XXXX.XXXX.XX format (e.g., 756.1234.5678.90)",
+      "notes": "Swiss social security number"
+    }
+  },
+  "TWN": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{8}$",
+      "length": 8,
+      "description": "8 digits (e.g., 12345678)",
+      "notes": "Taiwan tax identification number"
+    }
+  },
+  "TJK": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., T1234567)",
+      "notes": "Tajikistan passport number"
+    }
+  },
+  "TZA": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{9}$",
+      "length": 9,
+      "description": "9 digits (e.g., 123456789)",
+      "notes": "Tanzania tax identification number"
+    }
+  },
+  "THA": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{13}$",
+      "length": 13,
+      "description": "13 digits (e.g., 1234567890123)",
+      "notes": "Thailand tax identification number"
+    }
+  },
+  "TLS": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., T1234567)",
+      "notes": "Timor-Leste passport number"
+    }
+  },
+  "TGO": {
+    "required_field": "nif",
+    "format": {
+      "pattern": "^\\d{11}$",
+      "length": 11,
+      "description": "11 digits (e.g., 12345678901)",
+      "notes": "Togo tax identification number"
+    }
+  },
+  "TON": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., T1234567)",
+      "notes": "Tonga passport number"
+    }
+  },
+  "TTO": {
+    "required_field": "bir",
+    "format": {
+      "pattern": "^\\d{9}$",
+      "length": 9,
+      "description": "9 digits (e.g., 123456789)",
+      "notes": "Trinidad and Tobago board of inland revenue"
+    }
+  },
+  "TUN": {
+    "required_field": "mf",
+    "format": {
+      "pattern": "^\\d{8}$",
+      "length": 8,
+      "description": "8 digits (e.g., 12345678)",
+      "notes": "Tunisia tax identification number"
+    }
+  },
+  "TUR": {
+    "required_field": "tckn",
+    "format": {
+      "pattern": "^\\d{11}$",
+      "length": 11,
+      "description": "11 digits (e.g., 12345678901)",
+      "notes": "Turkish citizenship number"
+    }
+  },
+  "TKM": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., T1234567)",
+      "notes": "Turkmenistan passport number"
+    }
+  },
+  "TCA": {
+    "required_field": "other",
+    "format": {
+      "pattern": null,
+      "length": null,
+      "description": "Format not publicly standardized",
+      "notes": "Various ID types accepted"
+    }
+  },
+  "TUV": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^[A-Z]\\d{7}$",
+      "length": 8,
+      "description": "1 letter, 7 digits (e.g., T1234567)",
+      "notes": "Tuvalu passport number"
+    }
+  },
+  "UGA": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{10}$",
+      "length": 10,
+      "description": "10 digits (e.g., 1234567890)",
+      "notes": "Uganda tax identification number"
+    }
+  },
+  "UKR": {
+    "required_field": "rnokpp",
+    "format": {
+      "pattern": "^\\d{10}$",
+      "length": 10,
+      "description": "10 digits (e.g., 1234567890)",
+      "notes": "Ukraine individual tax number"
+    }
+  },
+  "ARE": {
+    "required_field": "emirates_id",
+    "format": {
+      "pattern": "^784-\\d{4}-\\d{7}-\\d$",
+      "length": 18,
+      "description": "784-YYYY-XXXXXXX-X format (e.g., 784-1985-1234567-8)",
+      "notes": "UAE Emirates ID with birth year"
+    }
+  },
+  "GBR": {
+    "required_field": "nino",
+    "format": {
+      "pattern": "^[A-Z]{2}\\d{6}[A-Z]$",
+      "length": 9,
+      "description": "2 letters, 6 digits, 1 letter (e.g., AB123456C)",
+      "notes": "UK national insurance number"
+    }
+  },
+  "USA": {
+    "required_field": "ssn",
+    "format": {
+      "pattern": "^\\d{3}-\\d{2}-\\d{4}$",
+      "length": 11,
+      "description": "XXX-XX-XXXX format (e.g., 123-45-6789)",
+      "notes": "US Social Security Number, hyphens sometimes omitted"
+    }
+  },
+  "URY": {
+    "required_field": "rut",
+    "format": {
+      "pattern": "^\\d{12}$",
+      "length": 12,
+      "description": "12 digits (e.g., 123456789012)",
+      "notes": "Uruguay unique tax roll"
+    }
+  },
+  "UZB": {
+    "required_field": "inn",
+    "format": {
+      "pattern": "^\\d{9}$",
+      "length": 9,
+      "description": "9 digits (e.g., 123456789)",
+      "notes": "Uzbekistan individual taxpayer number"
+    }
+  },
+  "VUT": {
+    "required_field": "other",
+    "format": {
+      "pattern": null,
+      "length": null,
+      "description": "Format not publicly standardized",
+      "notes": "Various ID types accepted"
+    }
+  },
+  "VEN": {
+    "required_field": "rif",
+    "format": {
+      "pattern": "^[VEJPG]-\\d{8}-\\d$",
+      "length": 12,
+      "description": "1 letter, hyphen, 8 digits, hyphen, 1 digit (e.g., V-12345678-9)",
+      "notes": "Venezuela tax information registry"
+    }
+  },
+  "VNM": {
+    "required_field": "mst",
+    "format": {
+      "pattern": "^\\d{10}$",
+      "length": 10,
+      "description": "10 digits (e.g., 1234567890)",
+      "notes": "Vietnam tax code"
+    }
+  },
+  "VIR": {
+    "required_field": "passport",
+    "format": {
+      "pattern": "^\\d{9}$",
+      "length": 9,
+      "description": "9 digits (e.g., 123456789)",
+      "notes": "US passport format for Virgin Islands"
+    }
+  },
+  "YEM": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{9}$",
+      "length": 9,
+      "description": "9 digits (e.g., 123456789)",
+      "notes": "Yemen tax identification number"
+    }
+  },
+  "ZMB": {
+    "required_field": "tpin",
+    "format": {
+      "pattern": "^\\d{10}$",
+      "length": 10,
+      "description": "10 digits (e.g., 1234567890)",
+      "notes": "Zambia taxpayer identification number"
+    }
+  },
+  "ZWE": {
+    "required_field": "tin",
+    "format": {
+      "pattern": "^\\d{8}$",
+      "length": 8,
+      "description": "8 digits (e.g., 12345678)",
+      "notes": "Zimbabwe tax identification number"
+    }
+  }
+}
