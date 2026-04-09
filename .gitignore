@@ -5,3 +5,8 @@
 .mailmap
 .idea/workspace.xml
 .metadata
+/android/build/
+/android/app/release/
+/.idea/
+/android/.idea/
+/android/.kotlin/
